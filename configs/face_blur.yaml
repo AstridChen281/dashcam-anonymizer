@@ -1,0 +1,13 @@
+model_path: 'weight/yolov8-face.pt'
+videos_path: '/inspire/hdd/global_user/chenyanzhu-253107140032/repos/dashcam_anonymizer/blurred_videos/time_location_masked/23-step11_time_location_masked.mp4'           # 输入：单个视频文件路径 或 目录路径
+output_dir: 'blurred_videos/face_blurred'
+
+detection_conf_thresh: 0.40     # 置信度阈值：越高误检越少，漏检越多；行车记录仪建议 0.35-0.45
+gpu_avail: True
+imgsz: 1280                     # 推理输入尺寸。越大越准（小人脸），越慢。建议 1280 或 640
+blur_radius: 31                 # 高斯模糊核大小（必须为奇数）。越大越模糊
+save_frames: False              # True：同时保存带框的调试帧；False：只输出视频
+time_limit: null                # 只处理前 N 秒。null 表示全部处理
+gap_fill_window: 5              # 补全最多 N 帧的检测空洞（减少人脸框闪烁）
+gap_fill_mode: interpolate      # interpolate：插值补帧；nearest：复制最近帧
+debug_keep_artifacts: False     # True：保留 runs/ 和中间文件；False：自动清理
