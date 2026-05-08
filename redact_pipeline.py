@@ -52,11 +52,7 @@ CAMERA_MAPPING     = CAMERA_DIR / "video_camera_map.json"
 # ── 输出目录 ──────────────────────────────────────────────────
 BLURRED_ROOT = REPO / "blurred_videos"
 PIPELINE_ARTIFACT_ROOT = Path(tempfile.gettempdir()) / "dashcam_anonymizer_artifacts"
-SPECIAL_INPUT_SUFFIXES = {
-    "videos0430": "",
-    "videos-tg": "tg",
-    "videos-tg-0502": "tg_0502",
-}
+SPECIAL_INPUT_SUFFIXES = {}
 
 
 # ---------------------------------------------------------------------------
